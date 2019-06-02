@@ -1,0 +1,88 @@
+/* 
+  –– Project: Acemble Cards [ Part of Acemble Framework ] [ https://acemble.co/ ]
+  –– Tagline: CSS3 + Mathematics = Acemble.
+  –– Version: 0.0.1 [ Alpha ]
+  –– Author & Copyright [ 2019 ]: Dishant Agnihotri [ https://dishantagnihotri.com ]
+  –– Licensed under MIT [ https://github.com/dishantagnihotri/acemble-skeleton/blob/master/LICENSE ]
+  ––
+  –– This is a styled file for Acemble Card. This may vary depending on the release.
+  –– This file is just for test purposes, & will be released once all the components will be completed.
+  –– 
+  –– This card has following properties.
+    - Header
+    - Image
+    - Content
+    - Actions
+    - Footer
+    - Image Overlays
+    - 
+  –– Alignments
+    - Horizontally
+    - Vertically 
+    -
+  –– Theme Supported
+    - Light [ Default ]
+    - Dark
+    -
+  –– To Do:
+    - Loading Animations. Will be in card-animations.css
+    - Sizing.
+    - React Component
+    - Angular Component
+    - Vue Component
+    -
+*/
+:root {
+  --card-light: #fff;
+  --card-dark: #363636;
+  --text-light: #363636;
+  --text-dark: #fff;
+}
+.card,
+.card .image,
+.card .body,
+.card .header,
+.card .actions,
+.card .footer,
+.card .has-overlay {
+  display: flex;
+  position: relative;
+}
+.card,
+.card .body {
+  flex-direction: column !important;
+  justify-content: center;
+}
+.card.is-horizontal,
+.card .actions {
+  flex-direction: row !important;
+  justify-content: flex-start;
+}
+.card {
+  border-radius: 6px;
+  padding: 0 !important;
+  background-color: var(--card-light);
+  color: var(--text-light);
+  box-shadow: 0px 5px 18px rgba(114, 111, 111, 0.1);
+}
+body.is-dark .card {
+  background-color: var(--card-light);
+  color: var(--text-light);
+}
+.card .image {
+  height: 200px;
+}
+.card.is-horizontal .image {
+  height: 100%;
+}
+.card .image .has-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+.card .header,
+.card .content,
+.card .footer,
+.card .actions,
+.card .image .has-overlay {
+  padding: 15px;
+}

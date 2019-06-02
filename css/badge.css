@@ -1,0 +1,98 @@
+/* 
+  –– Project: Acemble Badge [ Part of Acemble Framework ] [ https://acemble.co/ ]
+  –– Tagline: CSS3 + Mathematics = Acemble.
+  –– Version: 0.0.1 [ Alpha ]
+  –– Author & Copyright [ 2019 ]: Dishant Agnihotri [ https://dishantagnihotri.com ]
+  –– Licensed under MIT [ https://github.com/dishantagnihotri/acemble-skeleton/blob/master/LICENSE ]
+  ––
+  –– This badge has following properties.
+    - Default
+    - Label
+    - Icon
+    - 
+  –– Alignments
+    - Top Left
+    - Top Right
+    - Bottom Left    
+    - Bottom Right
+    -
+  –– Theme Supported
+    - Light [ Default ]
+    - Dark
+    -
+  –– To Do:
+    - Notification Animations. Will be in badge-animations.css
+    - React Component
+    - Angular Component
+    - Vue Component
+    -
+*/
+:root {
+  --badge-default: #13c2c2;
+  --badge-success: #52c41a;
+  --badge-error: #f5222d;
+  --badge-warning: #faad14;
+  --badge-default-text: #fff;
+  --badge-success-text: #fff;
+  --badge-error-text: #fff;
+  --badge-warning-text: #fff;
+}
+.badge {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  white-space: nowrap;
+  background-color: var(--badge-default);
+}
+.badge.has-label *,
+.badge.has-label {
+  min-width: 20px;
+  width: auto;
+  height: 20px;
+  font-size: 11px;
+  border-radius: 10px;
+  padding: 1px 5px;
+  color: #fff;
+  font-weight: bold;
+}
+.badge.has-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+.badge.has-icon * {
+  font-size: 14px;
+  line-height: 0;
+  color: var(--badge-default-text);
+}
+.badge.is-success {
+  background-color: var(--badge-success);
+  color: var(--badge-success-text);
+}
+.badge.is-error {
+  background-color: var(--badge-error);
+  color: var(--badge-error-text);
+}
+.badge.is-warning {
+  background-color: var(--badge-warning);
+  color: var(--badge-warning-text);
+}
+
+.badge.top-left {
+  left: -1px !important;
+}
+.badge.bottom-left {
+  top: auto !important;
+  left: -1px !important;
+  right: auto !important;
+  bottom: -1px !important;
+}
+.badge.bottom-right {
+  top: auto !important;
+  bottom: -1px !important;
+}
